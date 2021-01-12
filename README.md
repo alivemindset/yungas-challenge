@@ -13,7 +13,7 @@ Siga os passos abaixo, executando os comandos para instalar as dependências e r
 <pre><code> git clone https://github.com/alivemindset/yungas-challenge.git </code></pre>
 
 - Acesse a pasta do projeto e instale as dependências:
-<pre><code> yarn install </code></pre>
+<pre><code> yarn </code></pre>
 
 - Rodar em modo desenvolvimento:
 <pre><code> yarn dev </code></pre>
