@@ -2,7 +2,7 @@ import Router from 'express'
 
 const router = Router()
 
-router.get('/', (request, response) => {
+router.get('/', async (request, response) => {
   return response.status(200).send()
 })
 
