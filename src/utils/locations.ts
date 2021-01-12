@@ -14,6 +14,10 @@ export const centro_oeste = ['goiás', 'mato grosso', 'mato grosso do sul', 'dis
 export const sudeste = ['são paulo', 'minas gerais', 'rio de janeiro', 'espírito santo']
 export const sul = ['paraná', 'santa catarina', 'rio grande do sul']
 
+export function isValidLocation (state: string): boolean {
+  return !!validLocations.includes(state.replace('-', '_'))
+}
+
 export function getArrayLocation (location: string): string[] {
   location = location.toLowerCase()
   if (location === 'norte') return norte
@@ -30,4 +34,5 @@ export function getLocation (state: string) {
   if (centro_oeste.includes(state)) return 'centro_oeste'
   if (sudeste.includes(state)) return 'sudeste'
   if (sul.includes(state)) return 'sul'
+  return 'international'
 }

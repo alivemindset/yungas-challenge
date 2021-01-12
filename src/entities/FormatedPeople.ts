@@ -1,4 +1,4 @@
-export interface IPeopleEntity {
+export interface IPeopleFormatedEntity {
   'gender':string
   'name': {
     'title':string
@@ -6,7 +6,7 @@ export interface IPeopleEntity {
     'last':string
   },
   'location':{
-    'region'?: string
+    'region': boolean | string
     'street':string
     'city':string
     'state':string
@@ -21,20 +21,20 @@ export interface IPeopleEntity {
     }
   },
   'email': string
-  'dob': {
-    'date': string
-    'age': number
-  }
-  'registered': {
-    'date': string
-    'age': number
-  }
-  'phone': string
-  'cell': string
+  'birthday': string
+  'registered': string
+  'telephoneNumbers': boolean | string[]
+  'mobileNumbers': boolean | string[]
   'picture':{
     'large':string
     'medium':string
     'thumbnail':string
   },
-  'nationality'?: string
+  'nationality'?: string,
+  'dob'?: {
+    'date': string
+    'age': number
+  },
+  'phone'?: string,
+  'cell'?: string
 }

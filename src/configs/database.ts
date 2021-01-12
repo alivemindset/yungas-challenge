@@ -1,7 +1,8 @@
 /* eslint-disable camelcase */
 import people from './people.json'
 import { IPeopleEntity } from '../entities/People'
-import { getArrayLocation } from '../utils/locations'
+// import { getArrayLocation } from '../utils/locations'
+// import { IGetPeoplesQueryDTO } from '../useCases/GetPeoples/GetPeoplesQueryDTO'
 
 export interface IResult {
   results: IPeopleEntity[]
@@ -14,32 +15,22 @@ export default class Database {
     this.dbConnection = people
   }
 
-  async find (page: number, page_size: number, location: string) {
-    const items = await this.findByLocation(location)
-    if (!this.isValidPageNumber(page, page_size, items)) return false
-
-    const initial = page_size * page - page_size
-    const result = items.slice(initial, initial + page_size)
-
-    return { result, total_items: items.length }
+  getConnection (): IResult {
+    return this.dbConnection
   }
 
-  async findByLocation (location: string) {
-    const locations = getArrayLocation(location)
+  // async find (data: IGetPeoplesQueryDTO) {
+  //   const items = await this.findByLocation(data.location)
+  //   const result = items.slice(data.offset, data.limit)
 
-    const result = this.dbConnection.results.filter(data => locations.includes(data.location.state))
+  //   return { result, total_items: items.length }
+  // }
 
-    return result
-  }
+  // async findByLocation (location: string) {
+  //   const locations = getArrayLocation(location)
 
-  isValidPageNumber (page: number, page_size: number, items: IPeopleEntity[]) {
-    const totalPages = Math.ceil(items.length / page_size)
+  //   const result = this.dbConnection.results.filter(data => locations.includes(data.location.state))
 
-    if (page > totalPages) return false
-    else return true
-  }
-
-  async getTotalItems () {
-    return this.dbConnection.results.length
-  }
+  //   return result
+  // }
 }
