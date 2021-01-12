@@ -21,6 +21,7 @@ export default {
     const result = peoples.result
 
     const dto = {
+      location,
       page: Number(page),
       page_size: Number(page_size),
       total_items: peoples.total_items,

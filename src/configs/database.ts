@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import people from './people.json'
 import { IPeopleEntity } from '../entities/People'
-import { getLocation } from '../utils/locations'
+import { getArrayLocation } from '../utils/locations'
 
 export interface IResult {
   results: IPeopleEntity[]
@@ -25,7 +25,7 @@ export default class Database {
   }
 
   async findByLocation (location: string) {
-    const locations = getLocation(location)
+    const locations = getArrayLocation(location)
 
     const result = this.dbConnection.results.filter(data => locations.includes(data.location.state))
 
