@@ -9,19 +9,19 @@ Código criado utilizando TypeScript com os príncipios S.O.L.I.D com arquitetur
 Siga os passos abaixo, executando os comandos para instalar as dependências e rodar a API localmente.
 <br>
 
-- Clone o projeto para a maquina local
+- Clone o projeto para a maquina local:
 <pre><code> git clone https://github.com/alivemindset/yungas-challenge.git </code></pre>
 
-- Instale as dependências
+- Acesse a pasta do projeto e instale as dependências:
 <pre><code> yarn install </code></pre>
 
-- Rodar em modo desenvolvimento
+- Rodar em modo desenvolvimento:
 <pre><code> yarn dev </code></pre>
 
-- Realizar build
+- Realizar build:
 <pre><code> yarn build </code></pre>
 
-- Rodar o projeto build
+- Rodar o projeto build:
 <pre><code> yarn start </code></pre>
 
 
