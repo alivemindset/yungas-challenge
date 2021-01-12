@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",                          
+    "module": "commonjs",               
+    "moduleResolution": "Node",      
+    "allowJs": true,                       
+    "sourceMap": true,                     
+    "outDir": "./dist",                        
+    "rootDir": "./",                       
+    "removeComments": true,                
+    "strict": true,                           
+    "noImplicitAny": true,                 
+    "noImplicitThis": true,                
+    "esModuleInterop": true,                  
+    "experimentalDecorators": true,        
+    "emitDecoratorMetadata": true,         
+    "skipLibCheck": true,                     
+    "forceConsistentCasingInFileNames": true,
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}
