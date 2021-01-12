@@ -46,6 +46,8 @@ Rotas disponíveis:
 
 <p>Retorna pessoas cadastradas no banco de dados com paginação.</p>
 
+---
+
  <h4>http://127.0.0.1:3333/peoples/:região?page=1&page_size=20</h4>
   <p>A Rota recebe dois paramêtros opcionais chamados de <b>page</b> e <b>page_size</b>. Também recebe um parâmetro para filtrar por região do país.</p>
   
