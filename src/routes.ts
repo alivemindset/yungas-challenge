@@ -8,5 +8,6 @@ router.get('/', async (request, response) => {
 })
 
 router.get('/peoples', PeoplesController.getPeoplesByPage)
+router.get('/peoples/:location', PeoplesController.getPeoplesByPage)
 
 export { router }
